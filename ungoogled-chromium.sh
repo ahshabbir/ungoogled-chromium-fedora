@@ -51,6 +51,10 @@ CHROMIUM_DISTRO_FLAGS=" --enable-plugins \
                         --disable-background-networking \
                         --force-local-ntp \
                         --disallow-signin \
-                        --auto-ssl-client-auth @@EXTRA_FLAGS@@"
+                        --auto-ssl-client-auth \
+						--enable-features=UseOzonePlatform \
+						--ozone-platform=wayland \
+						--disable-gpu-memory-buffer-video-frames \
+						--enable-gpu @@EXTRA_FLAGS@@"
 
 exec -a "$0" "$HERE/@@CHROMIUM_BROWSER_CHANNEL@@" $CHROMIUM_DISTRO_FLAGS "$@"

@@ -40,7 +40,7 @@
 %global build_clear_key_cdm 1
 
 # NEVER EVER EVER turn this on in official builds
-%global freeworld 0
+%global freeworld 1
 %if %{freeworld}
 %global lsuffix freeworld
 %global nsuffix -freeworld
